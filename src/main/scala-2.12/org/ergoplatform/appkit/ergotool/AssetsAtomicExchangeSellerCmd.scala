@@ -43,7 +43,7 @@ case class AssetsAtomicExchangeSellerCmd(toolConf: ErgoToolConfig,
       val unspent = loggedStep(s"Loading unspent boxes from at address $sender", console) {
         ctx.getUnspentBoxesFor(sender)
       }
-      val boxesToSpend = BoxOperations.selectTop(unspent, MinFee)
+      val boxesToSpend = BoxOperations.selectTop(unspent, MinFee + 1)
       val txB = ctx.newTxBuilder
       val newBox = txB.outBoxBuilder
         .value(MinFee)
