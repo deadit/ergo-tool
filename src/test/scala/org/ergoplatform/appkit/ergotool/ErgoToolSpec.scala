@@ -203,8 +203,11 @@ class ErgoToolSpec extends PropSpec with Matchers with ScalaCheckDrivenPropertyC
       args = Seq(
         "storage/E2.json",
         "9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v",
-        "1000000",
-        "500"),
+        "1000000", // ERG box.value (min fee)
+        "500", // token price in ERG
+        "21f84cf457802e66fb5930fb5d45fbe955933dc16a72089bf8980797f24e2fa1", // tokenId
+        "60" // token amount
+      ),
       expectedConsoleScenario =
         s"""Storage password> ::abc;
            |""".stripMargin, data)
