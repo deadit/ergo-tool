@@ -85,6 +85,7 @@ case class AssetsAtomicExchangeMatchCmd(toolConf: ErgoToolConfig,
   }
 }
 
+// TODO: add buyer and seller addresses
 object AssetsAtomicExchangeMatchCmd extends CmdDescriptor(
   name = "AssetAtomicExchangeMatch", cmdParamSyntax = "<wallet file> <sellerBoxId> <buyerBoxId>  <ergPrice> <tokenId> <tokenAmount>",
   description = "match an existing token seller's contract (by <sellerBoxId>) and an existing buyer's contract (by <buyerBoxId) for specified token amount (by <tokenId> and <tokenAmount>) at given <ergPrice> price until with the given <wallet file> to sign transaction (requests storage password)") {
