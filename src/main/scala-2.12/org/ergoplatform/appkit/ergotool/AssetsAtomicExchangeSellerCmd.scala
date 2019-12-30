@@ -72,6 +72,7 @@ case class AssetsAtomicExchangeSellerCmd(toolConf: ErgoToolConfig,
     })
   }
 }
+
 object AssetsAtomicExchangeSellerCmd extends CmdDescriptor(
   name = "AssetAtomicExchangeSeller", cmdParamSyntax = "<wallet file> <sellerAddr> <deadline> <ergPrice> <tokenId> <tokenAmount>",
   description = "put a token seller contract with given <tokenId> and <tokenAmount> for sale at given <ergPrice> price until given <deadline> with <sellerAddr> to be used for withdrawal(after the deadline) \n " +
